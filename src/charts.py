@@ -29,12 +29,13 @@ def plot_scatter_matrix(df: DataFrame, target_col: str) -> None:
     Plots a scatter matrix for the Iris dataset, coloring points by species.
     """
     features = df.columns[df.columns != target_col]
+    plot_df = df.copy()
 
     # Escolhe uma paleta de cores
     colors = {'Iris-setosa': 'red', 'Iris-versicolor': 'green', 'Iris-virginica': 'blue'}
-    df['color'] = df[target_col].map(colors)
+    plot_df['color'] = plot_df[target_col].map(colors)
 
     # Gera o scatter_matrix
-    _ = sns.pairplot(df, vars=features, hue=target_col, palette=colors, diag_kind='kde', plot_kws={'alpha': 0.5})
+    _ = sns.pairplot(plot_df, vars=features, hue=target_col, palette=colors, diag_kind='kde', plot_kws={'alpha': 0.5})
 
     plt.show()

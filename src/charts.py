@@ -46,5 +46,8 @@ def plot_scatter_matrix(df: DataFrame, target_col: str) -> None:
         ax.set_xlabel(ax.get_xlabel(), fontsize=8)
         ax.set_ylabel(ax.get_ylabel(), fontsize=8)
 
+    legend_labels = [plt.Line2D([0], [0], marker='o', color='w', label=key, markersize=8, markerfacecolor=value) for key, value in colors.items()]
+
+    plt.legend(handles=legend_labels, title='Species', bbox_to_anchor=(1.05, 1), fontsize=8)
     plt.suptitle("Scatter Matrix of Iris Dataset", fontsize=16)
     plt.show()

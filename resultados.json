@@ -1,0 +1,582 @@
+{
+ "fonte": "scikit-learn + correções UCI",
+ "estatisticas": {
+  "Iris-setosa": {
+   "sepal length": {
+    "media": 5.006,
+    "dp": 0.352,
+    "moda": "5/5.1"
+   },
+   "sepal width": {
+    "media": 3.418,
+    "dp": 0.381,
+    "moda": "3.4"
+   },
+   "petal length": {
+    "media": 1.464,
+    "dp": 0.174,
+    "moda": "1.5"
+   },
+   "petal width": {
+    "media": 0.244,
+    "dp": 0.107,
+    "moda": "0.2"
+   }
+  },
+  "Iris-versicolor": {
+   "sepal length": {
+    "media": 5.936,
+    "dp": 0.516,
+    "moda": "5.5/5.6/5.7"
+   },
+   "sepal width": {
+    "media": 2.77,
+    "dp": 0.314,
+    "moda": "3"
+   },
+   "petal length": {
+    "media": 4.26,
+    "dp": 0.47,
+    "moda": "4.5"
+   },
+   "petal width": {
+    "media": 1.326,
+    "dp": 0.198,
+    "moda": "1.3"
+   }
+  },
+  "Iris-virginica": {
+   "sepal length": {
+    "media": 6.588,
+    "dp": 0.636,
+    "moda": "6.3"
+   },
+   "sepal width": {
+    "media": 2.974,
+    "dp": 0.322,
+    "moda": "3"
+   },
+   "petal length": {
+    "media": 5.552,
+    "dp": 0.552,
+    "moda": "5.1"
+   },
+   "petal width": {
+    "media": 2.026,
+    "dp": 0.275,
+    "moda": "1.8"
+   }
+  }
+ },
+ "corr_petalas": 0.963,
+ "corr_sepala_petala": 0.872,
+ "corr_largsepala_comppetala": -0.421,
+ "pca": {
+  "sem padronização": {
+   "var_explicada": [
+    0.9246,
+    0.053,
+    0.0172,
+    0.0052
+   ],
+   "cargas_PC1": {
+    "sepal length": 0.362,
+    "sepal width": -0.082,
+    "petal length": 0.857,
+    "petal width": 0.359
+   },
+   "cargas_PC2": {
+    "sepal length": 0.657,
+    "sepal width": 0.73,
+    "petal length": -0.176,
+    "petal width": -0.075
+   }
+  },
+  "com padronização": {
+   "var_explicada": [
+    0.7277,
+    0.2303,
+    0.0368,
+    0.0052
+   ],
+   "cargas_PC1": {
+    "sepal length": 0.522,
+    "sepal width": -0.263,
+    "petal length": 0.581,
+    "petal width": 0.566
+   },
+   "cargas_PC2": {
+    "sepal length": 0.372,
+    "sepal width": 0.926,
+    "petal length": 0.021,
+    "petal width": 0.065
+   }
+  }
+ },
+ "micro_igual_acuracia": true,
+ "variabilidade": {
+  "nao_estratificada": {
+   "media": 0.9453666666666668,
+   "dp": 0.03839385078079271,
+   "min": 0.8,
+   "max": 1.0,
+   "p_le_933": 0.498,
+   "p_100": 0.157
+  },
+  "estratificada": {
+   "media": 0.9468000000000002,
+   "dp": 0.03865494075075583,
+   "min": 0.8,
+   "max": 1.0,
+   "p_le_933": 0.49,
+   "p_100": 0.182
+  }
+ },
+ "k3_teste": {
+  "acc": 0.9333333333333333,
+  "cm": [
+   [
+    10,
+    0,
+    0
+   ],
+   [
+    0,
+    10,
+    0
+   ],
+   [
+    0,
+    2,
+    8
+   ]
+  ],
+  "precisao": [
+   1.0,
+   0.833,
+   1.0
+  ],
+  "sensibilidade": [
+   1.0,
+   1.0,
+   0.8
+  ],
+  "f1": [
+   1.0,
+   0.909,
+   0.889
+  ]
+ },
+ "k_cv": {
+  "k_best": 3,
+  "tabela": [
+   {
+    "k": 1,
+    "acc treino": 1.0,
+    "acc CV": 0.9308,
+    "dp CV": 0.0688
+   },
+   {
+    "k": 3,
+    "acc treino": 0.9583,
+    "acc CV": 0.9558,
+    "dp CV": 0.0546
+   },
+   {
+    "k": 5,
+    "acc treino": 0.975,
+    "acc CV": 0.955,
+    "dp CV": 0.0558
+   },
+   {
+    "k": 7,
+    "acc treino": 0.975,
+    "acc CV": 0.955,
+    "dp CV": 0.0545
+   },
+   {
+    "k": 9,
+    "acc treino": 0.9583,
+    "acc CV": 0.9433,
+    "dp CV": 0.0633
+   },
+   {
+    "k": 11,
+    "acc treino": 0.9583,
+    "acc CV": 0.9467,
+    "dp CV": 0.0629
+   },
+   {
+    "k": 13,
+    "acc treino": 0.9583,
+    "acc CV": 0.9458,
+    "dp CV": 0.0617
+   },
+   {
+    "k": 15,
+    "acc treino": 0.9667,
+    "acc CV": 0.9433,
+    "dp CV": 0.0622
+   },
+   {
+    "k": 17,
+    "acc treino": 0.9583,
+    "acc CV": 0.9425,
+    "dp CV": 0.0609
+   },
+   {
+    "k": 19,
+    "acc treino": 0.9417,
+    "acc CV": 0.9433,
+    "dp CV": 0.0611
+   },
+   {
+    "k": 21,
+    "acc treino": 0.95,
+    "acc CV": 0.9417,
+    "dp CV": 0.0629
+   },
+   {
+    "k": 23,
+    "acc treino": 0.9583,
+    "acc CV": 0.9317,
+    "dp CV": 0.0711
+   },
+   {
+    "k": 25,
+    "acc treino": 0.9583,
+    "acc CV": 0.9183,
+    "dp CV": 0.0764
+   },
+   {
+    "k": 27,
+    "acc treino": 0.9417,
+    "acc CV": 0.9017,
+    "dp CV": 0.0811
+   },
+   {
+    "k": 29,
+    "acc treino": 0.9167,
+    "acc CV": 0.8892,
+    "dp CV": 0.0842
+   },
+   {
+    "k": 31,
+    "acc treino": 0.9,
+    "acc CV": 0.8833,
+    "dp CV": 0.0816
+   },
+   {
+    "k": 33,
+    "acc treino": 0.8917,
+    "acc CV": 0.8817,
+    "dp CV": 0.0801
+   },
+   {
+    "k": 35,
+    "acc treino": 0.875,
+    "acc CV": 0.8842,
+    "dp CV": 0.0735
+   },
+   {
+    "k": 37,
+    "acc treino": 0.8833,
+    "acc CV": 0.8875,
+    "dp CV": 0.072
+   },
+   {
+    "k": 39,
+    "acc treino": 0.8917,
+    "acc CV": 0.8817,
+    "dp CV": 0.0765
+   },
+   {
+    "k": 41,
+    "acc treino": 0.8917,
+    "acc CV": 0.8817,
+    "dp CV": 0.0747
+   },
+   {
+    "k": 43,
+    "acc treino": 0.8917,
+    "acc CV": 0.8767,
+    "dp CV": 0.0777
+   },
+   {
+    "k": 45,
+    "acc treino": 0.8917,
+    "acc CV": 0.8758,
+    "dp CV": 0.0768
+   },
+   {
+    "k": 47,
+    "acc treino": 0.875,
+    "acc CV": 0.8783,
+    "dp CV": 0.0758
+   },
+   {
+    "k": 49,
+    "acc treino": 0.8833,
+    "acc CV": 0.8792,
+    "dp CV": 0.073
+   },
+   {
+    "k": 51,
+    "acc treino": 0.8833,
+    "acc CV": 0.8717,
+    "dp CV": 0.0768
+   },
+   {
+    "k": 53,
+    "acc treino": 0.8833,
+    "acc CV": 0.8708,
+    "dp CV": 0.0758
+   },
+   {
+    "k": 55,
+    "acc treino": 0.8833,
+    "acc CV": 0.8692,
+    "dp CV": 0.0757
+   },
+   {
+    "k": 57,
+    "acc treino": 0.875,
+    "acc CV": 0.86,
+    "dp CV": 0.0841
+   },
+   {
+    "k": 59,
+    "acc treino": 0.875,
+    "acc CV": 0.8508,
+    "dp CV": 0.0852
+   }
+  ]
+ },
+ "variantes": [
+  {
+   "configuração": "sem padronização",
+   "k=3 média": 0.9533,
+   "k=3 dp": 0.0569,
+   "k=5 média": 0.97,
+   "k=5 dp": 0.0449
+  },
+  {
+   "configuração": "z-score (T04)",
+   "k=3 média": 0.9558,
+   "k=3 dp": 0.0546,
+   "k=5 média": 0.955,
+   "k=5 dp": 0.0558
+  },
+  {
+   "configuração": "min-max",
+   "k=3 média": 0.9658,
+   "k=3 dp": 0.0458,
+   "k=5 média": 0.9658,
+   "k=5 dp": 0.0473
+  },
+  {
+   "configuração": "PCA 2 comp. (sem padronização)",
+   "k=3 média": 0.9717,
+   "k=3 dp": 0.0412,
+   "k=5 média": 0.9692,
+   "k=5 dp": 0.0451
+  },
+  {
+   "configuração": "z-score + PCA 2 comp.",
+   "k=3 média": 0.895,
+   "k=3 dp": 0.0822,
+   "k=5 média": 0.9258,
+   "k=5 dp": 0.0735
+  },
+  {
+   "configuração": "z-score + PCA 3 comp.",
+   "k=3 média": 0.9633,
+   "k=3 dp": 0.0544,
+   "k=5 média": 0.9567,
+   "k=5 dp": 0.0559
+  },
+  {
+   "configuração": "z-score, só pétalas",
+   "k=3 média": 0.9492,
+   "k=3 dp": 0.0539,
+   "k=5 média": 0.9617,
+   "k=5 dp": 0.0533
+  },
+  {
+   "configuração": "z-score, só sépalas",
+   "k=3 média": 0.7575,
+   "k=3 dp": 0.1173,
+   "k=5 média": 0.7783,
+   "k=5 dp": 0.0988
+  },
+  {
+   "configuração": "z-score, pesos por distância",
+   "k=3 média": 0.9558,
+   "k=3 dp": 0.0546,
+   "k=5 média": 0.9542,
+   "k=5 dp": 0.0557
+  },
+  {
+   "configuração": "z-score, distância Manhattan",
+   "k=3 média": 0.9425,
+   "k=3 dp": 0.062,
+   "k=5 média": 0.9542,
+   "k=5 dp": 0.0582
+  }
+ ],
+ "melhor_variante": "PCA 2 comp. (sem padronização)",
+ "final": {
+  "config": "PCA 2 comp. (sem padronização)",
+  "k": 3,
+  "T04 (z-score, k=3)": {
+   "nome": "z-score (T04)",
+   "teste_acc": 0.9333333333333333,
+   "teste_cm": [
+    [
+     10,
+     0,
+     0
+    ],
+    [
+     0,
+     10,
+     0
+    ],
+    [
+     0,
+     2,
+     8
+    ]
+   ],
+   "teste_precisao": [
+    1.0,
+    0.833,
+    1.0
+   ],
+   "teste_sens": [
+    1.0,
+    1.0,
+    0.8
+   ],
+   "teste_f1": [
+    1.0,
+    0.909,
+    0.889
+   ],
+   "cv_media": 0.9466666666666669,
+   "cv_dp": 0.05163977794943222,
+   "cv_cm": [
+    [
+     490,
+     10,
+     0
+    ],
+    [
+     0,
+     469,
+     31
+    ],
+    [
+     0,
+     39,
+     461
+    ]
+   ],
+   "erros": {
+    "41": 10,
+    "68": 1,
+    "70": 9,
+    "72": 10,
+    "77": 1,
+    "83": 10,
+    "106": 10,
+    "119": 10,
+    "133": 9,
+    "134": 9,
+    "138": 1
+   }
+  },
+  "final": {
+   "nome": "PCA 2 comp. (sem padronização)",
+   "teste_acc": 0.9666666666666667,
+   "teste_cm": [
+    [
+     10,
+     0,
+     0
+    ],
+    [
+     0,
+     10,
+     0
+    ],
+    [
+     0,
+     1,
+     9
+    ]
+   ],
+   "teste_precisao": [
+    1.0,
+    0.909,
+    1.0
+   ],
+   "teste_sens": [
+    1.0,
+    1.0,
+    0.9
+   ],
+   "teste_f1": [
+    1.0,
+    0.952,
+    0.947
+   ],
+   "cv_media": 0.9733333333333333,
+   "cv_dp": 0.037712361663282526,
+   "cv_cm": [
+    [
+     500,
+     0,
+     0
+    ],
+    [
+     0,
+     477,
+     23
+    ],
+    [
+     0,
+     17,
+     483
+    ]
+   ],
+   "erros": {
+    "70": 2,
+    "72": 10,
+    "77": 1,
+    "83": 10,
+    "106": 10,
+    "126": 1,
+    "138": 2,
+    "149": 4
+   }
+  }
+ },
+ "fronteiras": [
+  {
+   "k": 1,
+   "acc treino": 1.0,
+   "acc teste": 0.9666666666666667
+  },
+  {
+   "k": 3,
+   "acc treino": 0.9916666666666667,
+   "acc teste": 0.9666666666666667
+  },
+  {
+   "k": 59,
+   "acc treino": 0.8916666666666667,
+   "acc teste": 0.9
+  }
+ ]
+}

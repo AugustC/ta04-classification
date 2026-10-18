@@ -1,5 +1,6 @@
 import matplotlib.pyplot as plt
 from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 import pandas as pd
 
 def pca_decomposition(df: pd.DataFrame, target_col: str, n_components: int = 3):
@@ -52,3 +53,19 @@ def pca_decomposition(df: pd.DataFrame, target_col: str, n_components: int = 3):
     ax.add_artist(legend1)
 
     plt.show()
+
+
+def pca_summary(df: pd.DataFrame, target_col: str, standardize: bool = False):
+    """
+    Fits a PCA with all components and returns (explained variance ratio, loadings, projection).
+    With standardize=True the features are scaled to zero mean and unit variance first.
+    """
+    features = df.columns[df.columns != target_col]
+    X = df[features].to_numpy()
+    if standardize:
+        X = StandardScaler().fit_transform(X)
+    pca = PCA().fit(X)
+    names = [f'PC{i + 1}' for i in range(pca.n_components_)]
+    explained = pd.Series(pca.explained_variance_ratio_, index=names, name='variância explicada')
+    loadings = pd.DataFrame(pca.components_.T, index=features, columns=names)
+    return explained, loadings, pca.transform(X)
